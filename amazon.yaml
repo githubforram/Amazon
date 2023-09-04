@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: amazon
+  name: amazon
+  namespace: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: amazon
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: amazon
+    spec:
+      containers:
+      - image: raamriot/amazon:1.0
+        name: amazon
+        resources: {}
+status: {}
